@@ -1,0 +1,70 @@
+<photoshop_scripting_guide>
+// PHOTOSHOP SCRIPTING REFERENCE FOR DOCUMENT, ARTBOARD AND LAYER CREATION
+// 此参考包含三个关键操作的完整代码示例和执行流程
+
+// 1. 创建带画板的文档示例代码
+const createDocumentWithArtboardCommand = {
+    "_obj": "make",
+    "documentID": 1958,
+    "new": {
+        "_obj": "document",
+        "artboard": true,
+        "artboardList": [
+            {
+                "_obj": "artboard",
+                "artboardRect": {
+                    "_obj": "classFloatRect",
+                    "bottom": 693.0,
+                    "left": 0.0,
+                    "right": 519.0,
+                    "top": 0.0
+                }
+            }
+        ],
+        "autoPromoteBackgroundLayer": false,
+        "depth": 8,
+        "fill": {
+            "_enum": "fill",
+            "_value": "white"
+        },
+        "height": {
+            "_unit": "distanceUnit",
+            "_value": 693.0
+        },
+        "mode": {
+            "_class": "RGBColorMode"
+        },
+        "resolution": {
+            "_unit": "densityUnit",
+            "_value": 72.0
+        },
+        "width": {
+            "_unit": "distanceUnit",
+            "_value": 519.0
+        }
+    }
+};
+
+// 2. 在已有文档中创建新画板的命令
+const createNewArtboardCommand = {
+    "_obj": "make",
+    "_target": [{"_ref": "artboardSection"}],
+    "artboardRect": {
+        "_obj": "classFloatRect",
+        "bottom": 693.0,
+        "left": 619.0,
+        "right": 1138.0,
+        "top": 0.0
+    }
+};
+
+// 3. 创建新图层的命令
+const createNewLayerCommand = {
+    "_obj": "make",
+    "_target": [{"_ref": "layer"}],
+    "layerID": 7
+};
+
+// 执行入口
+// await runModalFunction();
+</photoshop_scripting_guide>
